@@ -1,40 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# FitScore-Teste
 
-## Getting Started
+Este projeto é uma aplicação web desenvolvida com **Next.js**, **TypeScript** e **Tailwind CSS**, destinada à avaliação de candidatos por meio de um formulário interativo. Os usuários respondem a perguntas relacionadas a **performance**, **energia** e **cultura**, e recebem uma pontuação (**FitScore**) junto com uma classificação.
 
-First, run the development server:
+---
+
+## 🚀 Funcionalidades
+
+- **Formulário de Avaliação:** Coleta informações sobre performance, energia e cultura.
+- **Cálculo de FitScore:** Calcula a pontuação com base nas respostas.
+- **Classificação Automática:** Classifica o candidato com base no FitScore.
+- **Notificações por E-mail:** Envia e-mails com os resultados para o candidato e para o administrador.
+- **Feedback Visual:** Exibe um modal de sucesso após o envio do formulário.
+
+---
+
+## 🛠 Tecnologias Utilizadas
+
+- **Frontend:** Next.js, TypeScript, Tailwind CSS
+- **Backend:** API Routes do Next.js
+- **Banco de Dados:** Supabase
+- **Envio de E-mails:** Nodemailer (SMTP do Gmail)
+
+---
+
+## 📦 Instalação
+
+Clone o repositório e instale as dependências:
+
+````bash
+git clone https://github.com/FelipeRuizMarcuci/FitScore-Teste.git
+cd FitScore-Teste
+npm install
+
+## 🚀 Execução
+
+Para iniciar o servidor de desenvolvimento:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+````
+
+## 📄 Estrutura de Diretórios
+
+- `pages/api` → Contém as rotas da API, incluindo o envio de e-mails e inserção de dados no banco.
+- `pages/index.tsx` → Página principal com o formulário de avaliação.
+- `components` → Componentes reutilizáveis, como o `QuestionBlock` para as perguntas.
+- `services` → Funções auxiliares, como o envio de e-mails.
+
+---
+
+## 📧 Envio de E-mails
+
+O envio de e-mails é realizado utilizando o **Nodemailer** com o serviço **SMTP do Gmail**.  
+É importante garantir que as configurações de segurança da conta de e-mail permitam o envio de e-mails por meio de aplicativos externos.
+
+---
+
+## 🧪 Testes
+
+Para rodar os testes:
+
+```bash
+npm run test
+
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
